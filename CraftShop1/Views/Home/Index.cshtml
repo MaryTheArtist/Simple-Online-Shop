@@ -1,0 +1,18 @@
+﻿@model HomeViewModel
+
+
+
+<img class="home-image" alt="homeImage" src="~/images/sunset.jpg"/>
+
+<br />
+
+<h2>Products in stock: </h2>
+
+
+<div class="row">
+    @foreach(var item in Model.ItemOfTheWeek)
+    {
+        <partial name="_ItemCard" model="item" />
+    }
+
+</div>
